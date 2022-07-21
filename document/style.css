@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+main{
+    background-image:url(/images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+    display: flex;
+    height: 650px;
+    font-family: Poppins, sans-serif;
+}
+
+.container{
+    width: 70vw;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Konten Kiri */
+
+.container .kiri{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .kiri .content{
+    height: 250px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kiri .content h1{
+    font-size: 2.6em;
+}
+
+.kiri .content p{
+    font-size: 0.8em;
+}
+
+.content h1, .content p{
+    color: white;
+}
+
+/* Konten Kanan */
+
+.container .kanan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    width: 90%;
+    height: 75%;
+    justify-content: space-between;
+}
+
+.content .head{
+    font-size: 1vw;
+    width: 85%;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(247, 32%, 48%);
+}
+
+.input-form{
+    background-color: white;
+    width: 80%;
+    height: 600px;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.input-form-dua{
+    width: 85%;
+    height: 85%;
+    justify-content: space-between;
+}
+
+.input-form-dua input{
+    width: 77%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-color: hsl(0, 0%, 50%, 0.4);
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-form-dua input.name{
+    width: 77%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-color: hsl(0, 0%, 50%, 0.4);
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+
+.input-form-dua input::placeholder{
+    font-family: Poppins, sans-serif;
+    color: hsla(0, 0%, 50%, 0.5);
+    font-weight: 700;
+}
+
+.input-form-dua input:focus{
+     border: 2px solid hsl(247, 32%, 48%);
+     transition: 0.5s;
+     outline: none;
+}
+
+.input-form-dua .button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65px;
+}
+
+.input-form-dua button{
+    width: 100%;
+    height: 45px;
+    background-color: hsl(153, 49%, 47%);
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    font-size: 0.7em;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.input-form-dua button:hover{
+    background-color: hsl(153, 59%, 51%);
+}
+
+.input-form-dua p{
+    font-size: 0.6vw;
+    color: hsl(251, 13%, 84%);
+}
+
+.input-form-dua p span{
+    color: red;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container .kanan, .content, .input-form, .input-form-dua{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: hsl(0, 100%, 74%);
+}
+
+/* Responsive */
+
+/* Desktop */
+
+@media(max-width:1024px){
+.container{
+        width: 65vw;
+    }
+
+.container .kiri .content{
+    height: 300px;
+    width: 270px;
+}
+
+.kiri .content h1{
+    font-size: 2em;
+}
+
+.kiri .content p{
+    font-size: 0.8em;
+}
+
+}
+
+/* Handphone */
+
+@media(max-width: 600px){
+    main{
+        height: 1000px;
+    }
+    .container{
+        width: 375px;
+       display: flex;
+       flex-direction: column;
+    }
+    
+    /* Kiri */
+    .container .kiri .content{
+        justify-content: space-evenly;
+    }
+
+    .kiri .content h1{
+    font-size: 1.8em;
+    text-align: center;
+    }
+
+    .kiri .content p{
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    }
+    /* Akhir Kiri */
+
+    /* Kanan */
+
+    .container .kanan{
+        justify-content: start;
+    }
+
+    .kanan .content .head{
+        font-size: 2.5vw;
+    }
+
+    .kanan .content{
+        height: 500px;
+        justify-content: start;
+    }
+
+    .content .input-form p{
+        font-size: 2vw;
+        text-align: center;
+    }
+}
+
